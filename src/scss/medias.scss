@@ -1,0 +1,15 @@
+@media (max-width: 500px){
+    .add-task{
+        flex-direction: column;
+
+
+        .submit-task{
+            border-radius: 10px !important;
+            width: 100% !important;
+        }
+
+        .input-task{
+            border-radius: 10px !important;
+        }
+    }
+}

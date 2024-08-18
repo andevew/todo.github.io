@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-SemiBold.woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  background-color: #FCFCFC;
+}
+
+@keyframes finishChangeColor {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #a1ff9f;
+  }
+}
+@keyframes deleteChangeColor {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #ffa5a5;
+  }
+}
+.change-finish-color {
+  animation: finishChangeColor 1s ease;
+}
+
+.change-delete-color {
+  animation: deleteChangeColor 1s ease;
+}
+
+@media (max-width: 500px) {
+  .add-task {
+    flex-direction: column;
+  }
+  .add-task .submit-task {
+    border-radius: 10px !important;
+    width: 100% !important;
+  }
+  .add-task .input-task {
+    border-radius: 10px !important;
+  }
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container section {
+  width: 681px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container section .title {
+  background: linear-gradient(90deg, #07FDFD, #4D69FE, #CC00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-weight: 900;
+  font-family: "Overpass";
+  color: #5A5A5A;
+}
+.container section .add-task {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px #F0F0F0;
+  height: 9.12%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container section .add-task .submit-task {
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  width: 13.8032305433%;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Overpass";
+  color: white;
+  background-image: linear-gradient(90deg, #07FDFD, #4D69FE, #CC00FF);
+}
+.container section .add-task .input-task {
+  padding-left: 20px;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  width: 86.1967694567%;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Overpass";
+  color: #5A5A5A;
+}
+.container section .progress {
+  gap: 13px;
+  width: 100%;
+  display: flex;
+}
+.container section .progress .tasks-done, .container section .progress .tasks-on-progress {
+  background-color: white;
+  padding: 10px 16px;
+  width: 50%;
+  border: 1px solid #D9D9D9;
+}
+.container section .progress .tasks-done span, .container section .progress .tasks-on-progress span {
+  background: linear-gradient(90deg, #07FDFD, #4D69FE, #CC00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Overpass";
+  color: #5A5A5A;
+}
+.container section .tasks {
+  width: 100%;
+}
+.container section .tasks li {
+  box-shadow: 0 10px 20px #F0F0F0;
+  margin: 16px 0;
+  padding: 16px;
+  background-color: white;
+  width: calc(100% - 32px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container section .tasks li .task-text {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Overpass";
+  color: #5A5A5A;
+}
+.container section .tasks li .task-icons {
+  display: flex;
+  gap: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

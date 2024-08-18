@@ -1,0 +1,96 @@
+
+@import './fonts';
+@import './vars';
+@import './mixins';
+@import './globals';
+@import './animation';
+@import './medias';
+
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    @include flex-center;
+
+
+    section {
+        width: #{$container-width}px;
+        height: 100%;
+        @include flex-center;
+        flex-direction: column;
+
+        .title {
+            @include gradient-text($main-gradient);
+            @include text($title-size, $title-weight);
+        }
+
+        .add-task{
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: $main-shadow;
+            height: calc(57 * 100% / $container-height);
+            width: 100%;
+            @include flex-center;
+            .submit-task{
+                height: 100%;
+                border-radius: 0 10px 10px 0;
+                border: none;
+                width: calc(94 * 100% / $container-width);
+                @include text($task-text-size, $task-text-weight, white);
+                background-image: $main-gradient;
+            }
+
+            .input-task{
+                padding-left: 20px;
+                height: 100%;
+                border-radius: 10px 0 0 10px;
+                border: none;
+                width: calc(587 * 100% / $container-width);
+                @include text($task-text-size, $task-text-weight);
+            }
+        }
+
+        .progress{
+            
+            gap: 13px;
+            width: 100%;
+            display: flex;
+            .tasks-done, .tasks-on-progress{
+                background-color: white;
+                padding: 10px 16px;
+                width: 50%;
+                @include border;
+                span{
+                    @include gradient-text($main-gradient);
+                    @include text($progress-text-size, $progress-text-width);
+                }
+            }
+        }
+
+        .tasks{
+            width: 100%;
+
+            li{
+                box-shadow: $main-shadow;
+                margin: 16px 0;
+                padding: 16px;
+                background-color: white;
+                width: calc(100% - $task-padding * 2);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .task-text{
+                    @include text($task-text-size, $task-text-weight);
+                }
+
+                .task-icons{
+                    display: flex;
+                    gap: $icons-gap;
+                }
+                
+            }
+        }
+    }
+}

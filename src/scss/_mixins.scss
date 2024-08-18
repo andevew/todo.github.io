@@ -1,0 +1,26 @@
+
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gradient-text($gradient: linear-gradient(90deg, #07FDFD, #4D69FE, #CC00FF), $size: 16px){
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@mixin text($size, $weight, $color: #5A5A5A){
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Overpass';
+    color: $color;
+}
+
+@mixin border{
+    border: 1px solid $border-color;
+}
+

@@ -1,0 +1,28 @@
+@keyframes finishChangeColor{
+    0%{
+        background-color: white;
+    }
+
+    100%{
+        background-color: #a1ff9f;
+    }
+}
+
+@keyframes deleteChangeColor{
+    0%{
+        background-color: white;
+    }
+
+    100%{
+        background-color: #ffa5a5;
+    }
+}
+
+
+.change-finish-color{
+    animation: finishChangeColor 1s ease;
+}
+
+.change-delete-color{
+    animation: deleteChangeColor 1s ease;
+}
